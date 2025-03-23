@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+* Updated package name to qianduo_midjourney_api
+* Updated documentation with correct package name and import instructions
+* Fixed library name in main entry file
+
 ## 1.0.0
 
 Initial release of the midjourney_api package.

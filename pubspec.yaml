@@ -1,6 +1,6 @@
 name: qianduo_midjourney_api
 description: A Dart package for interacting with QianDuoDuo's MidJourney API service. Generate, upscale images and monitor task status through MidJourney's API service.
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/lukefan/midjourney_api_package
 homepage: https://github.com/lukefan/midjourney_api_package
 environment:
