@@ -80,22 +80,10 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "characters",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/characters-1.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.4"
-    },
-    {
       "name": "checked_yaml",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/checked_yaml-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
-    },
-    {
-      "name": "clock",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/clock-1.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.4"
     },
     {
       "name": "code_builder",
@@ -116,6 +104,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "coverage",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/coverage-1.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "crypto",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/crypto-3.0.6",
       "packageUri": "lib/",
@@ -128,12 +122,6 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "fake_async",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/fake_async-1.3.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "file",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/file-7.0.1",
       "packageUri": "lib/",
@@ -144,24 +132,6 @@
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/fixnum-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.1"
-    },
-    {
-      "name": "flutter",
-      "rootUri": "file:///Users/lukefan/development/flutter/packages/flutter",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
-    },
-    {
-      "name": "flutter_lints",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.1"
-    },
-    {
-      "name": "flutter_test",
-      "rootUri": "file:///Users/lukefan/development/flutter/packages/flutter_test",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
     },
     {
       "name": "frontend_server_client",
@@ -224,26 +194,8 @@
       "languageVersion": "3.6"
     },
     {
-      "name": "leak_tracker",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/leak_tracker-10.0.8",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "leak_tracker_flutter_testing",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "leak_tracker_testing",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
       "name": "lints",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/lints-3.0.0",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/lints-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -260,12 +212,6 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "material_color_utilities",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/material_color_utilities-0.11.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "meta",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/meta-1.16.0",
       "packageUri": "lib/",
@@ -276,6 +222,12 @@
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/mime-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.2"
+    },
+    {
+      "name": "node_preamble",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/node_preamble-2.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "package_config",
@@ -314,16 +266,22 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "shelf_packages_handler",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/shelf_packages_handler-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shelf_static",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/shelf_static-1.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "shelf_web_socket",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/shelf_web_socket-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
-    },
-    {
-      "name": "sky_engine",
-      "rootUri": "file:///Users/lukefan/development/flutter/bin/cache/pkg/sky_engine",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
     },
     {
       "name": "source_gen",
@@ -336,6 +294,18 @@
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/source_helper-1.3.5",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "source_map_stack_trace",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/source_map_stack_trace-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "source_maps",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/source_maps-0.10.13",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "source_span",
@@ -374,8 +344,20 @@
       "languageVersion": "3.1"
     },
     {
+      "name": "test",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/test-1.25.15",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
       "name": "test_api",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/test_api-0.7.4",
+      "packageUri": "lib/",
+      "languageVersion": "3.5"
+    },
+    {
+      "name": "test_core",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/test_core-0.6.8",
       "packageUri": "lib/",
       "languageVersion": "3.5"
     },
@@ -390,12 +372,6 @@
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/typed_data-1.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
-    },
-    {
-      "name": "vector_math",
-      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
     },
     {
       "name": "vm_service",
@@ -428,19 +404,25 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "webkit_inspection_protocol",
+      "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/webkit_inspection_protocol-1.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "yaml",
       "rootUri": "file:///Users/lukefan/.pub-cache/hosted/pub.dev/yaml-3.1.3",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
     {
-      "name": "midjourney_api_package",
+      "name": "midjourney_api",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "3.7"
+      "languageVersion": "2.17"
     }
   ],
-  "generated": "2025-03-23T01:19:56.074955Z",
+  "generated": "2025-03-23T01:25:14.444515Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/lukefan/development/flutter",

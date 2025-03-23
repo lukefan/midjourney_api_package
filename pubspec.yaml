@@ -1,21 +1,23 @@
-name: midjourney_api_package
-description: A Flutter package for interacting with MidJourney API
-version: 0.0.1
-homepage: https://github.com/lukefan/midjourney_api
-
+name: midjourney_api
+description: A Dart package for interacting with QianDuoDuo's MidJourney API service. Generate, upscale images and monitor task status through MidJourney's API service.
+version: 1.0.0
+repository: https://github.com/lukefan/midjourney_api_package
+homepage: https://github.com/lukefan/midjourney_api_package
 environment:
-  sdk: '>=3.7.0 <4.0.0'
-  flutter: ">=1.17.0"
+  sdk: '>=2.17.0 <4.0.0'
 
 dependencies:
-  flutter:
-    sdk: flutter
-  http: ^1.2.0
+  http: ^1.1.0
   json_annotation: ^4.8.1
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^3.0.1
+  lints: ^2.0.0
+  test: ^1.24.0
   build_runner: ^2.4.8
-  json_serializable: ^6.7.1 
+  json_serializable: ^6.7.1
+
+# Additional information about this package
+topics:
+  - midjourney
+  - ai
+  - image-generation 
