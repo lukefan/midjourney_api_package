@@ -1,4 +1,4 @@
-library midjourney_api_package;
+library qianduo_midjourney_api;
 
 export 'src/midjourney_api.dart';
 export 'src/models/midjourney_models.dart';

@@ -1,4 +1,4 @@
-# MidJourney API Package
+# QianDuo MidJourney API Package
 
 A Dart package that provides a simple and efficient way to interact with the MidJourney API. This package allows you to generate images, upscale them, and monitor task status through MidJourney's API service.
 
@@ -25,7 +25,7 @@ Add this package to your project's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  midjourney_api: ^1.0.0
+  qianduo_midjourney_api: ^1.0.0
 ```
 
 Then run:
@@ -40,8 +40,8 @@ dart pub get
 
 ```dart
 final api = MidjourneyApi(
-  baseUrl: 'https://api.ifopen.ai',
-  apiToken: 'YOUR_API_TOKEN',
+  baseUrl: 'https://api.ifopen.ai', // Default base URL
+  apiToken: 'YOUR_API_TOKEN', // Get this from api.ifopen.ai dashboard
 );
 ```
 
