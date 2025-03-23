@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.3
+
+* Updated documentation with complete usage examples
+* Added step-by-step guide with code examples
+* Improved API usage clarity
+* Added features section
+* Standardized image URL retrieval method
+
 ## 1.0.2
 
 * Added imageUrl field to TaskStatus model
