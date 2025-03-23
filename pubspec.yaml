@@ -1,0 +1,21 @@
+name: midjourney_api_package
+description: A Flutter package for interacting with MidJourney API
+version: 0.0.1
+homepage: https://github.com/lukefan/midjourney_api
+
+environment:
+  sdk: '>=3.7.0 <4.0.0'
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  json_annotation: ^4.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.8
+  json_serializable: ^6.7.1 
