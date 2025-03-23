@@ -25,7 +25,7 @@ Add this package to your project's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  qianduo_midjourney_api: ^1.0.0
+  qianduo_midjourney_api: ^1.0.1
 ```
 
 Then run:
