@@ -416,13 +416,13 @@
       "languageVersion": "3.4"
     },
     {
-      "name": "midjourney_api",
+      "name": "qianduo_midjourney_api",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2025-03-23T01:25:14.444515Z",
+  "generated": "2025-03-23T01:31:38.522188Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///Users/lukefan/development/flutter",
