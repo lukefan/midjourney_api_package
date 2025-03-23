@@ -23,31 +23,31 @@ Map<String, dynamic> _$ImagineResponseToJson(ImagineResponse instance) =>
     };
 
 Button _$ButtonFromJson(Map<String, dynamic> json) => Button(
-  customId: json['customId'] as String,
-  emoji: json['emoji'] as String,
-  label: json['label'] as String,
-  style: (json['style'] as num).toInt(),
-  type: (json['type'] as num).toInt(),
-);
+      customId: json['customId'] as String,
+      emoji: json['emoji'] as String,
+      label: json['label'] as String,
+      style: (json['style'] as num).toInt(),
+      type: (json['type'] as num).toInt(),
+    );
 
 Map<String, dynamic> _$ButtonToJson(Button instance) => <String, dynamic>{
-  'customId': instance.customId,
-  'emoji': instance.emoji,
-  'label': instance.label,
-  'style': instance.style,
-  'type': instance.type,
-};
+      'customId': instance.customId,
+      'emoji': instance.emoji,
+      'label': instance.label,
+      'style': instance.style,
+      'type': instance.type,
+    };
 
 TaskStatus _$TaskStatusFromJson(Map<String, dynamic> json) => TaskStatus(
-  id: json['id'] as String,
-  status: json['status'] as String,
-  progress: json['progress'] as String,
-  failReason: json['failReason'] as String?,
-  buttons:
-      (json['buttons'] as List<dynamic>?)
+      id: json['id'] as String,
+      status: json['status'] as String,
+      progress: json['progress'] as String,
+      failReason: json['failReason'] as String?,
+      buttons: (json['buttons'] as List<dynamic>?)
           ?.map((e) => Button.fromJson(e as Map<String, dynamic>))
           .toList(),
-);
+      imageUrl: json['imageUrl'] as String?,
+    );
 
 Map<String, dynamic> _$TaskStatusToJson(TaskStatus instance) =>
     <String, dynamic>{
@@ -56,6 +56,7 @@ Map<String, dynamic> _$TaskStatusToJson(TaskStatus instance) =>
       'progress': instance.progress,
       'failReason': instance.failReason,
       'buttons': instance.buttons,
+      'imageUrl': instance.imageUrl,
     };
 
 ActionRequest _$ActionRequestFromJson(Map<String, dynamic> json) =>

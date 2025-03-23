@@ -100,6 +100,12 @@ class MidjourneyApi {
       try {
         final jsonData = jsonDecode(response.body);
         print('API response data: $jsonData');
+        
+        // Add imageUrl to the response if status is SUCCESS
+        if (jsonData['status'] == 'SUCCESS') {
+          jsonData['imageUrl'] = getImageUrl(taskId);
+        }
+        
         final status = TaskStatus.fromJson(jsonData);
         print('Parsed status object: $status');
         return status;

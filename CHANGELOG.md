@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2
+
+* Added imageUrl field to TaskStatus model
+* Automatically set imageUrl when task status is SUCCESS
+* Improved task status handling
+
 ## 1.0.1
 
 * Updated package name to qianduo_midjourney_api

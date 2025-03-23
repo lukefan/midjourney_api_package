@@ -25,7 +25,7 @@ Add this package to your project's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  qianduo_midjourney_api: ^1.0.1
+  qianduo_midjourney_api: ^1.0.2
 ```
 
 Then run:
@@ -36,28 +36,89 @@ dart pub get
 
 ## Usage
 
-### Initialize the API Client
+### Complete Example
+
+Here's a complete example of how to generate an image, monitor its progress, get the image URL, and upscale it:
 
 ```dart
-final api = MidjourneyApi(
-  baseUrl: 'https://api.ifopen.ai', // Default base URL
-  apiToken: 'YOUR_API_TOKEN', // Get this from api.ifopen.ai dashboard
-);
-```
+void main() async {
+  final api = MidjourneyApi(
+    baseUrl: 'https://api.ifopen.ai',
+    apiToken: 'YOUR_API_TOKEN',
+  );
 
-### Generate an Image
+  try {
+    // 1. Generate image
+    final response = await api.imagine('A beautiful sunset over mountains');
+    final taskId = response.result.toString();
+    print('Generation started, task ID: $taskId');
 
-```dart
-try {
-  final response = await api.imagine('A beautiful sunset over mountains');
-  print('Task ID: ${response.taskId}');
-} catch (e) {
-  print('Error generating image: $e');
+    // 2. Monitor progress until completion
+    final status = await api.pollTaskStatus(
+      taskId,
+      onProgress: (status, progress) {
+        print('Status: $status, Progress: $progress');
+      },
+    );
+
+    // 3. Get image URL when status is SUCCESS
+    if (status.status == 'SUCCESS') {
+      final imageUrl = api.getImageUrl(status.id);
+      print('Image URL: $imageUrl');
+
+      // 4. Get upscale buttons
+      final buttons = api.getUpscaleButtons(status);
+      print('Available upscale buttons:');
+      for (var i = 0; i < buttons.length; i++) {
+        print('U${i + 1}: taskId=${buttons[i]['taskId']}, customId=${buttons[i]['customId']}');
+      }
+
+      // 5. Upscale a specific version (e.g., U1)
+      final upscaleResponse = await api.upscale(
+        buttons[0]['taskId']!,
+        buttons[0]['customId']!,
+      );
+      final upscaleTaskId = upscaleResponse.result.toString();
+
+      // 6. Monitor upscale progress
+      final upscaleStatus = await api.pollTaskStatus(
+        upscaleTaskId,
+        onProgress: (status, progress) {
+          print('Upscale Status: $status, Progress: $progress');
+        },
+      );
+
+      // 7. Get upscaled image URL
+      if (upscaleStatus.status == 'SUCCESS') {
+        final upscaledImageUrl = api.getImageUrl(upscaleStatus.id);
+        print('Upscaled Image URL: $upscaledImageUrl');
+      }
+    }
+  } catch (e) {
+    print('Error: $e');
+  } finally {
+    api.dispose();
+  }
 }
 ```
 
-### Monitor Task Status
+### Step-by-Step Guide
 
+1. Initialize the API Client:
+```dart
+final api = MidjourneyApi(
+  baseUrl: 'https://api.ifopen.ai',
+  apiToken: 'YOUR_API_TOKEN',
+);
+```
+
+2. Generate an Image:
+```dart
+final response = await api.imagine('Your prompt here');
+final taskId = response.result.toString();
+```
+
+3. Monitor Task Status:
 ```dart
 final status = await api.pollTaskStatus(
   taskId,
@@ -67,29 +128,32 @@ final status = await api.pollTaskStatus(
 );
 ```
 
-### Upscale an Image
-
+4. Get Image URL:
 ```dart
-try {
-  // Get upscale buttons from task status
-  final buttons = api.getUpscaleButtons(status);
-  
-  // Upscale the first image (U1)
-  final upscaleResponse = await api.upscale(
-    buttons[0]['taskId']!,
-    buttons[0]['customId']!,
-  );
-  
-  print('Upscale task ID: ${upscaleResponse.taskId}');
-} catch (e) {
-  print('Error upscaling image: $e');
+if (status.status == 'SUCCESS') {
+  final imageUrl = api.getImageUrl(status.id);
 }
 ```
 
-### Get Image URL
-
+5. Get Upscale Buttons:
 ```dart
-final imageUrl = api.getImageUrl(taskId);
+final buttons = api.getUpscaleButtons(status);
+// buttons is a list of maps containing taskId and customId for each U1-U4 button
+// Example: [{'taskId': 'xxx', 'customId': 'yyy'}, ...]
+```
+
+6. Upscale an Image:
+```dart
+// Upscale using U1 button (first button)
+final upscaleResponse = await api.upscale(
+  buttons[0]['taskId']!,
+  buttons[0]['customId']!,
+);
+```
+
+7. Clean up:
+```dart
+api.dispose();
 ```
 
 ## Error Handling
@@ -112,14 +176,6 @@ try {
 } catch (e) {
   print('Unexpected error: $e');
 }
-```
-
-## Cleanup
-
-Don't forget to dispose of the API client when you're done:
-
-```dart
-api.dispose();
 ```
 
 ## Contributing

@@ -50,6 +50,7 @@ class TaskStatus {
   final String progress;
   final String? failReason;
   final List<Button>? buttons;
+  final String? imageUrl;
 
   TaskStatus({
     required this.id,
@@ -57,6 +58,7 @@ class TaskStatus {
     required this.progress,
     this.failReason,
     this.buttons,
+    this.imageUrl,
   });
 
   factory TaskStatus.fromJson(Map<String, dynamic> json) =>
